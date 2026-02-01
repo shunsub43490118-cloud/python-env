@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    image: ubuntu22.04
+    container_name: torch-dev
+    volumes:
+      - ../work:/root/work
+    working_dir: /root/work
+    command: sleep infinity
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
