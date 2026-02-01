@@ -15,21 +15,20 @@
 1. リポジトリをクローンまたは取得します
 2. Docker イメージをビルド:
 
-```bash
-docker build -t git-env -f Docker/Dockerfile .
+```
+docker compose build
 ```
 
 3. docker-compose で起動:
 
 ```bash
-docker-compose -f Docker/docker-compose.yaml up -d
+docker compose up -d
 ```
 
 4. コンテナに入る例:
 
-```bash
-docker exec -it <コンテナ名> /bin/bash
-```
+VScodeのリモートエクスプローラーから入る。
+
 
 ## ディレクトリ構成
 - `Docker/` - Dockerfile と docker-compose 設定
